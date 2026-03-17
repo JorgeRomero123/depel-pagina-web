@@ -55,7 +55,7 @@ export function Hero() {
           </div>
 
           {/* Trust markers — plain text, not badges */}
-          <div className="mt-12 flex gap-8 text-sm text-white/50 uppercase tracking-wider font-medium">
+          <div className="mt-12 flex gap-8 text-base md:text-lg text-white/60 uppercase tracking-wider font-semibold">
             <span>+15 años</span>
             <span>+200 proyectos</span>
             <span>NOM &middot; DC3</span>
