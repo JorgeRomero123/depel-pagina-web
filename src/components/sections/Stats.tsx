@@ -4,7 +4,7 @@ import { useInView } from "@/hooks/useInView";
 import { useCountUp } from "@/hooks/useCountUp";
 
 const stats = [
-  { value: 15, suffix: "+", label: "Anos de Experiencia" },
+  { value: 15, suffix: "+", label: "Años de Experiencia" },
   { value: 200, suffix: "+", label: "Proyectos Completados" },
   { value: 50, suffix: "+", label: "Clientes Industriales" },
   { value: 100, suffix: "%", label: "Cumplimiento NOM" },
@@ -46,7 +46,7 @@ export function Stats() {
       aria-labelledby="stats-heading"
     >
       <h2 id="stats-heading" className="sr-only">
-        DEPEL en numeros
+        DEPEL en números
       </h2>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

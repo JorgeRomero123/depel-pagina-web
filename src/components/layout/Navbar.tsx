@@ -42,7 +42,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-8" aria-label="Navegacion principal">
+          <nav className="hidden lg:flex items-center gap-8" aria-label="Navegación principal">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -73,7 +73,7 @@ export function Navbar() {
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-expanded={isMobileOpen}
             aria-controls="mobile-menu"
-            aria-label={isMobileOpen ? "Cerrar menu" : "Abrir menu"}
+            aria-label={isMobileOpen ? "Cerrar menú" : "Abrir menú"}
           >
             {isMobileOpen ? (
               <X className={cn("h-6 w-6", isScrolled ? "text-neutral-dark" : "text-white")} />
@@ -89,7 +89,7 @@ export function Navbar() {
         <nav
           id="mobile-menu"
           className="fixed inset-0 top-20 z-40 bg-primary-dark/95 flex flex-col items-center justify-center gap-8 lg:hidden"
-          aria-label="Navegacion movil"
+          aria-label="Navegación móvil"
         >
           {navLinks.map((link) => (
             <Link

@@ -1,27 +1,27 @@
 const steps = [
   {
     number: "01",
-    title: "Ingenieria",
+    title: "Ingeniería",
     description:
-      "Proyecto con calculos electricos y diagramas en AutoCAD. A la medida de tus necesidades.",
+      "Proyecto con cálculos eléctricos y diagramas en AutoCAD. A la medida de tus necesidades.",
   },
   {
     number: "02",
     title: "Presupuesto",
     description:
-      "Catalogo de conceptos con precios unitarios o precio alzado conforme a proyecto.",
+      "Catálogo de conceptos con precios unitarios o precio alzado conforme a proyecto.",
   },
   {
     number: "03",
-    title: "Instalacion",
+    title: "Instalación",
     description:
-      "Ejecucion con ingenieros supervisores y tecnicos certificados conforme a proyecto aprobado.",
+      "Ejecución con ingenieros supervisores y técnicos certificados conforme a proyecto aprobado.",
   },
   {
     number: "04",
     title: "Puesta en Marcha",
     description:
-      "Pruebas a conductores y equipos de proteccion. Arranque supervisado de los equipos.",
+      "Pruebas a conductores y equipos de protección. Arranque supervisado de los equipos.",
   },
 ];
 
@@ -36,7 +36,7 @@ export function TurnkeyProcess() {
           Proyectos Llave en Mano
         </h2>
         <p className="mt-3 text-neutral-muted max-w-lg">
-          De la ingenieria a la puesta en marcha. Un solo responsable.
+          De la ingeniería a la puesta en marcha. Un solo responsable.
         </p>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-neutral-border">

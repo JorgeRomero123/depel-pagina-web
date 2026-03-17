@@ -6,22 +6,22 @@ import { cn } from "@/lib/cn";
 const testimonials = [
   {
     quote:
-      "DEPEL demostro profesionalismo y compromiso en la instalacion electrica de nuestra planta. Cumplieron con los tiempos y las normas de seguridad. Su equipo estuvo presente en cada etapa del proyecto y resolvieron los imprevistos con rapidez.",
-    name: "Ing. Carlos Martinez",
+      "DEPEL demostró profesionalismo y compromiso en la instalación eléctrica de nuestra planta. Cumplieron con los tiempos y las normas de seguridad. Su equipo estuvo presente en cada etapa del proyecto y resolvieron los imprevistos con rapidez.",
+    name: "Ing. Carlos Martínez",
     role: "Gerente de Planta",
-    company: "Farmaceutica del Centro",
+    company: "Farmacéutica del Centro",
   },
   {
     quote:
-      "El mantenimiento preventivo que nos brinda DEPEL ha reducido significativamente nuestros tiempos de inactividad. Llevamos mas de 5 anos trabajando juntos y la calidad del servicio se ha mantenido constante. Un equipo verdaderamente confiable.",
-    name: "Lic. Maria Fernandez",
+      "El mantenimiento preventivo que nos brinda DEPEL ha reducido significativamente nuestros tiempos de inactividad. Llevamos más de 5 años trabajando juntos y la calidad del servicio se ha mantenido constante. Un equipo verdaderamente confiable.",
+    name: "Lic. María Fernández",
     role: "Directora de Operaciones",
     company: "Industrias del Sur",
   },
   {
     quote:
-      "La instalacion de paneles solares fue impecable. Redujimos nuestro costo energetico en un 40% en el primer ano gracias a su asesoria. El retorno de inversion fue mas rapido de lo que esperabamos.",
-    name: "Ing. Roberto Sanchez",
+      "La instalación de paneles solares fue impecable. Redujimos nuestro costo energético en un 40% en el primer año gracias a su asesoría. El retorno de inversión fue más rápido de lo que esperábamos.",
+    name: "Ing. Roberto Sánchez",
     role: "Director General",
     company: "Manufacturas Morelos",
   },

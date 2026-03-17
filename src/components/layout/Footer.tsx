@@ -18,15 +18,15 @@ export function Footer() {
           <div>
             <span className="text-2xl font-bold tracking-wide">DEPEL</span>
             <p className="mt-4 text-white/70 text-sm leading-relaxed">
-              Ingenieria electrica industrial de confianza. Proyectos llave en mano
-              desde la ingenieria hasta la puesta en marcha.
+              Ingeniería eléctrica industrial de confianza. Proyectos llave en mano
+              desde la ingeniería hasta la puesta en marcha.
             </p>
           </div>
 
           {/* Navigation */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-widest text-accent mb-4">
-              Navegacion
+              Navegación
             </h3>
             <ul className="space-y-2">
               {navLinks.map((link) => (
@@ -48,11 +48,11 @@ export function Footer() {
               Servicios
             </h3>
             <ul className="space-y-2 text-sm text-white/70">
-              <li>Instalaciones Electricas</li>
+              <li>Instalaciones Eléctricas</li>
               <li>Mantenimiento Preventivo</li>
               <li>Mantenimiento Correctivo</li>
-              <li>Asesorias Tecnicas</li>
-              <li>Energias Alternativas</li>
+              <li>Asesorías Técnicas</li>
+              <li>Energías Alternativas</li>
             </ul>
           </div>
 
@@ -64,7 +64,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm text-white/70">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-accent" />
-                Jiutepec, Morelos, Mexico
+                Jiutepec, Morelos, México
               </li>
               <li className="flex items-center gap-3 text-sm text-white/70">
                 <Phone className="h-4 w-4 shrink-0 text-accent" />
@@ -83,7 +83,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-sm text-white/70">
                 <Clock className="h-4 w-4 shrink-0 text-accent" />
-                Lun - Sab: 08:00 - 17:00
+                Lun - Sáb: 08:00 - 17:00
               </li>
             </ul>
           </div>
@@ -91,7 +91,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-white/50">
-            &copy; {new Date().getFullYear()} DEPEL Ingenieria. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} DEPEL Ingeniería. Todos los derechos reservados.
           </p>
           <Link
             href="/aviso-de-privacidad"

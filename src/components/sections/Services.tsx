@@ -5,27 +5,27 @@ const services = [
   {
     id: "ingenieria-electrica",
     number: "01",
-    title: "Ingenieria e Instalaciones Electricas",
+    title: "Ingeniería e Instalaciones Eléctricas",
     description:
-      "Ingenieria basada en Normas Electricas Mexicanas. Mediciones, calculos, diagramas y reportes en media y baja tension para la industria.",
+      "Ingeniería basada en Normas Eléctricas Mexicanas. Mediciones, cálculos, diagramas y reportes en media y baja tensión para la industria.",
     image:
       "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "asesorias-mantenimiento",
     number: "02",
-    title: "Asesorias y Mantenimiento",
+    title: "Asesorías y Mantenimiento",
     description:
-      "Asesorias en planeacion, ejecucion y puesta en marcha. Mantenimiento preventivo y correctivo para mantener tu operacion sin interrupciones.",
+      "Asesorías en planeación, ejecución y puesta en marcha. Mantenimiento preventivo y correctivo para mantener tu operación sin interrupciones.",
     image:
       "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "energias-alternativas",
     number: "03",
-    title: "Energias Alternativas",
+    title: "Energías Alternativas",
     description:
-      "Proyecto e instalacion de paneles solares y turbinas para generacion de energia. Reduce tu costo energetico con una instalacion profesional.",
+      "Proyecto e instalación de paneles solares y turbinas para generación de energía. Reduce tu costo energético con una instalación profesional.",
     image:
       "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80",
   },
@@ -42,8 +42,8 @@ export function Services() {
           Servicios
         </h2>
         <p className="mt-3 text-neutral-muted max-w-lg">
-          Soluciones integrales en ingenieria electrica para la industria
-          farmaceutica e industrial.
+          Soluciones integrales en ingeniería eléctrica para la industria
+          farmacéutica e industrial.
         </p>
 
         <div className="mt-12 space-y-16">
@@ -77,7 +77,7 @@ export function Services() {
                   href={`/servicios#${service.id}`}
                   className="inline-flex items-center gap-1 mt-6 text-sm font-semibold text-primary hover:text-primary-light transition-colors"
                 >
-                  Conocer mas
+                  Conocer más
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>

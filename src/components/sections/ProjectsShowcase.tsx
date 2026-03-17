@@ -3,25 +3,25 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: "Instalacion Electrica Industrial",
-    category: "Media Tension",
+    title: "Instalación Eléctrica Industrial",
+    category: "Media Tensión",
     image:
       "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "Subestacion Electrica",
-    category: "Alta Tension",
+    title: "Subestación Eléctrica",
+    category: "Alta Tensión",
     image:
       "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Paneles Solares Industriales",
-    category: "Energia Alternativa",
+    category: "Energía Alternativa",
     image:
       "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "Mantenimiento Planta Farmaceutica",
+    title: "Mantenimiento Planta Farmacéutica",
     category: "Mantenimiento",
     image:
       "https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=800&q=80",
@@ -44,7 +44,7 @@ export function ProjectsShowcase() {
               Proyectos
             </h2>
             <p className="mt-3 text-neutral-muted">
-              Trabajo que habla por si mismo.
+              Trabajo que habla por sí mismo.
             </p>
           </div>
           <Link

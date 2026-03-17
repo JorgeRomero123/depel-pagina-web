@@ -1,9 +1,9 @@
-# DEPEL - Pagina Web
+# DEPEL - Página Web
 
 ## Design Context
 
 ### Users
-Plant managers, procurement directors, and operations leads at pharmaceutical and industrial companies in Morelos and central Mexico. They visit this site to vet DEPEL before awarding a contract. They're evaluating competence, safety track record, and whether DEPEL can handle the scale. They're busy, skeptical, and comparing against 2-3 other bids. The site must answer "can I trust these people with my facility?" in under 10 seconds.
+Plant managers, procurement directors, and operations leads at pharmaceutical and industrial companies in Morelos and central México. They visit this site to vet DEPEL before awarding a contract. They're evaluating competence, safety track record, and whether DEPEL can handle the scale. They're busy, skeptical, and comparing against 2-3 other bids. The site must answer "can I trust these people with my facility?" in under 10 seconds.
 
 ### Brand Personality
 **Bold, Expert, Driven.** DEPEL is not a timid contractor waiting for the phone to ring — they're an engineering firm that wins contracts by showing up prepared, knowing the NOM standards cold, and delivering on time. The voice is direct, confident, technically precise, but never arrogant. Think: the foreman who explains the plan clearly and then executes it perfectly.

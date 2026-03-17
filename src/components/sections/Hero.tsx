@@ -25,14 +25,14 @@ export function Hero() {
             id="hero-heading"
             className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] text-white"
           >
-            Ingenieria Electrica
+            Ingeniería Eléctrica
             <br />
             Industrial
           </h1>
 
           <p className="mt-6 text-lg text-white/80 leading-relaxed max-w-lg">
-            Proyectos llave en mano en media y baja tension.
-            Certificacion DC3, cumplimiento NOM.
+            Proyectos llave en mano en media y baja tensión.
+            Certificación DC3, cumplimiento NOM.
             Jiutepec, Morelos.
           </p>
 
@@ -42,7 +42,7 @@ export function Hero() {
               href="/contacto"
               className="inline-flex items-center justify-center gap-2 bg-accent px-7 py-3.5 text-base font-semibold text-neutral-dark transition-colors hover:bg-accent-alt"
             >
-              Solicitar Cotizacion
+              Solicitar Cotización
               <ArrowRight className="h-5 w-5" />
             </Link>
             <a
@@ -55,7 +55,7 @@ export function Hero() {
 
           {/* Trust markers — plain text, not badges */}
           <div className="mt-12 flex gap-8 text-sm text-white/50 uppercase tracking-wider font-medium">
-            <span>+15 anos</span>
+            <span>+15 años</span>
             <span>+200 proyectos</span>
             <span>NOM &middot; DC3</span>
           </div>

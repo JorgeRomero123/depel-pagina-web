@@ -1,18 +1,18 @@
 const reasons = [
   {
-    title: "Certificacion DC3",
+    title: "Certificación DC3",
     description:
       "Todo nuestro personal cuenta con certificaciones DC3 vigentes. Equipo de seguridad y herramientas de vanguardia en cada proyecto.",
   },
   {
     title: "Cumplimiento NOM",
     description:
-      "Cada instalacion cumple estrictamente con las Normas Oficiales Mexicanas. Sin excepciones.",
+      "Cada instalación cumple estrictamente con las Normas Oficiales Mexicanas. Sin excepciones.",
   },
   {
-    title: "Sector Farmaceutico e Industrial",
+    title: "Sector Farmacéutico e Industrial",
     description:
-      "Experiencia directa en plantas farmaceuticas, manufactura e industria donde los estandares son los mas altos.",
+      "Experiencia directa en plantas farmacéuticas, manufactura e industria donde los estándares son los más altos.",
   },
   {
     title: "Mantenimiento Preventivo y Correctivo",
@@ -20,14 +20,14 @@ const reasons = [
       "No solo instalamos — mantenemos. Programas de mantenimiento que reducen tiempos de inactividad.",
   },
   {
-    title: "Equipo Tecnico Propio",
+    title: "Equipo Técnico Propio",
     description:
-      "Ingenieros supervisores, tecnicos certificados y ayudantes. Un equipo comprometido, no subcontratado.",
+      "Ingenieros supervisores, técnicos certificados y ayudantes. Un equipo comprometido, no subcontratado.",
   },
   {
     title: "Soporte Directo",
     description:
-      "Una llamada al (777) 319 8115. Sin call centers, sin tickets. Atencion directa cuando la necesitas.",
+      "Una llamada al (777) 319 8115. Sin call centers, sin tickets. Atención directa cuando la necesitas.",
   },
 ];
 
@@ -45,11 +45,11 @@ export function WhyChooseUs() {
               id="why-heading"
               className="text-3xl md:text-4xl font-bold text-neutral-dark"
             >
-              Por que trabajar con DEPEL
+              Por qué trabajar con DEPEL
             </h2>
             <p className="mt-4 text-neutral-muted leading-relaxed">
-              Mas de 15 anos respaldando la industria electrica en Morelos y
-              el centro de Mexico.
+              Más de 15 años respaldando la industria eléctrica en Morelos y
+              el centro de México.
             </p>
           </div>
 

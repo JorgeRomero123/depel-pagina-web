@@ -16,7 +16,7 @@ export function CTASection() {
             Hablemos de su proyecto
           </h2>
           <p className="mt-4 text-lg text-white/70 leading-relaxed">
-            Evaluacion sin compromiso. Llamenos directamente o escribanos
+            Evaluación sin compromiso. Llámenos directamente o escríbanos
             por WhatsApp.
           </p>
 
@@ -34,7 +34,7 @@ export function CTASection() {
               href="/contacto"
               className="inline-flex items-center justify-center gap-2 bg-accent px-7 py-3.5 text-base font-semibold text-neutral-dark transition-colors hover:bg-accent-alt"
             >
-              Solicitar Cotizacion
+              Solicitar Cotización
               <ArrowRight className="h-5 w-5" />
             </Link>
             <a
