@@ -1,98 +1,71 @@
-"use client";
-
-import {
-  CheckCircle,
-  Rocket,
-  ShieldCheck,
-  Users,
-  Cog,
-  Phone,
-} from "lucide-react";
-import { cn } from "@/lib/cn";
-import { useInView } from "@/hooks/useInView";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-
 const reasons = [
   {
-    icon: Rocket,
-    title: "Tecnologia Actual",
+    title: "Certificacion DC3",
     description:
-      "Software especializado para mediciones y pruebas que garantizan precision en nuestros proyectos.",
+      "Todo nuestro personal cuenta con certificaciones DC3 vigentes. Equipo de seguridad y herramientas de vanguardia en cada proyecto.",
   },
   {
-    icon: ShieldCheck,
-    title: "Equipo de Seguridad",
+    title: "Cumplimiento NOM",
     description:
-      "Herramientas y equipo de vanguardia. Personal con certificaciones DC3.",
+      "Cada instalacion cumple estrictamente con las Normas Oficiales Mexicanas. Sin excepciones.",
   },
   {
-    icon: CheckCircle,
-    title: "Calidad en Materiales",
+    title: "Sector Farmaceutico e Industrial",
     description:
-      "Materiales y equipos con soporte tecnico y garantia de nuestros proveedores.",
+      "Experiencia directa en plantas farmaceuticas, manufactura e industria donde los estandares son los mas altos.",
   },
   {
-    icon: Cog,
-    title: "Precios Competitivos",
+    title: "Mantenimiento Preventivo y Correctivo",
     description:
-      "Creamos oportunidades de negocio con presupuestos justos y transparentes.",
+      "No solo instalamos — mantenemos. Programas de mantenimiento que reducen tiempos de inactividad.",
   },
   {
-    icon: Users,
-    title: "Equipo Profesional",
+    title: "Equipo Tecnico Propio",
     description:
-      "Un equipo comprometido con apoyo constante para lograr un mismo resultado.",
+      "Ingenieros supervisores, tecnicos certificados y ayudantes. Un equipo comprometido, no subcontratado.",
   },
   {
-    icon: Phone,
-    title: "Soporte 24/7",
+    title: "Soporte Directo",
     description:
-      "Disponibilidad para atenderte generando un clima de confianza y respeto.",
+      "Una llamada al (777) 319 8115. Sin call centers, sin tickets. Atencion directa cuando la necesitas.",
   },
 ];
 
 export function WhyChooseUs() {
-  const { ref, isInView } = useInView({ threshold: 0.1 });
-
   return (
-    <section className="py-20 lg:py-28" aria-labelledby="why-heading">
+    <section
+      className="py-20 lg:py-28 bg-neutral-offwhite"
+      aria-labelledby="why-heading"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          id="why-heading"
-          title="Por que Elegirnos"
-          subtitle="Mas de 15 anos respaldando la industria electrica en Mexico"
-        />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+          {/* Left column — heading */}
+          <div className="lg:col-span-1">
+            <h2
+              id="why-heading"
+              className="text-3xl md:text-4xl font-bold text-neutral-dark"
+            >
+              Por que trabajar con DEPEL
+            </h2>
+            <p className="mt-4 text-neutral-muted leading-relaxed">
+              Mas de 15 anos respaldando la industria electrica en Morelos y
+              el centro de Mexico.
+            </p>
+          </div>
 
-        <div
-          ref={ref}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {reasons.map((reason, index) => {
-            const Icon = reason.icon;
-            return (
-              <div
-                key={reason.title}
-                className={cn(
-                  "flex gap-4 opacity-0 translate-y-6",
-                  isInView && "opacity-100 translate-y-0",
-                  "transition-all duration-500"
-                )}
-                style={{ transitionDelay: isInView ? `${index * 100}ms` : "0ms" }}
-              >
-                <div className="shrink-0 w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center">
-                  <Icon className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-neutral-dark mb-1">
-                    {reason.title}
-                  </h3>
-                  <p className="text-neutral-muted text-sm leading-relaxed">
-                    {reason.description}
-                  </p>
-                </div>
+          {/* Right column — reasons grid */}
+          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {reasons.map((reason) => (
+              <div key={reason.title}>
+                <h3 className="text-base font-bold text-neutral-dark">
+                  {reason.title}
+                </h3>
+                <p className="mt-2 text-sm text-neutral-muted leading-relaxed">
+                  {reason.description}
+                </p>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </div>
     </section>

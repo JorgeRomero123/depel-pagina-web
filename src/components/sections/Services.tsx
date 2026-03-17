@@ -1,65 +1,88 @@
-"use client";
-
-import { Zap, Wrench, Sun, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { cn } from "@/lib/cn";
-import { useInView } from "@/hooks/useInView";
-import { services } from "@/data/services";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 
-const iconMap = {
-  Zap,
-  Wrench,
-  Sun,
-};
+const services = [
+  {
+    id: "ingenieria-electrica",
+    number: "01",
+    title: "Ingenieria e Instalaciones Electricas",
+    description:
+      "Ingenieria basada en Normas Electricas Mexicanas. Mediciones, calculos, diagramas y reportes en media y baja tension para la industria.",
+    image:
+      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: "asesorias-mantenimiento",
+    number: "02",
+    title: "Asesorias y Mantenimiento",
+    description:
+      "Asesorias en planeacion, ejecucion y puesta en marcha. Mantenimiento preventivo y correctivo para mantener tu operacion sin interrupciones.",
+    image:
+      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    id: "energias-alternativas",
+    number: "03",
+    title: "Energias Alternativas",
+    description:
+      "Proyecto e instalacion de paneles solares y turbinas para generacion de energia. Reduce tu costo energetico con una instalacion profesional.",
+    image:
+      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80",
+  },
+];
 
 export function Services() {
-  const { ref, isInView } = useInView({ threshold: 0.1 });
-
   return (
-    <section
-      className="bg-neutral-offwhite py-20 lg:py-28"
-      aria-labelledby="services-heading"
-    >
+    <section className="py-20 lg:py-28" aria-labelledby="services-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
+        <h2
           id="services-heading"
-          title="Nuestros Servicios"
-          subtitle="Soluciones integrales en ingenieria electrica para la industria"
-        />
+          className="text-3xl md:text-4xl font-bold text-neutral-dark"
+        >
+          Servicios
+        </h2>
+        <p className="mt-3 text-neutral-muted max-w-lg">
+          Soluciones integrales en ingenieria electrica para la industria
+          farmaceutica e industrial.
+        </p>
 
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {services.map((service, index) => {
-            const Icon = iconMap[service.icon];
-            return (
-              <div
-                key={service.id}
-                className={cn(
-                  "bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 border-t-4 border-primary",
-                  "opacity-0 translate-y-8",
-                  isInView && "opacity-100 translate-y-0"
-                )}
-                style={{ transitionDelay: isInView ? `${index * 150}ms` : "0ms" }}
-              >
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                  <Icon className="h-7 w-7 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-neutral-dark mb-3">
+        <div className="mt-12 space-y-16">
+          {services.map((service) => (
+            <div
+              key={service.id}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
+            >
+              {/* Photo */}
+              <div className="aspect-[3/2] overflow-hidden bg-neutral-border">
+                <div
+                  className="w-full h-full bg-cover bg-center"
+                  style={{ backgroundImage: `url('${service.image}')` }}
+                  role="img"
+                  aria-label={service.title}
+                />
+              </div>
+
+              {/* Content */}
+              <div>
+                <span className="text-sm font-barlow font-bold text-neutral-muted tracking-wider">
+                  {service.number}
+                </span>
+                <h3 className="mt-2 text-2xl font-bold text-neutral-dark">
                   {service.title}
                 </h3>
-                <p className="text-neutral-muted leading-relaxed mb-6">
-                  {service.shortDescription}
+                <p className="mt-4 text-neutral-muted leading-relaxed">
+                  {service.description}
                 </p>
                 <Link
                   href={`/servicios#${service.id}`}
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary-light transition-colors"
+                  className="inline-flex items-center gap-1 mt-6 text-sm font-semibold text-primary hover:text-primary-light transition-colors"
                 >
                   Conocer mas
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,113 +1,96 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { useState } from "react";
 import { cn } from "@/lib/cn";
-import { testimonials } from "@/data/testimonials";
-import { SectionHeading } from "@/components/ui/SectionHeading";
+
+const testimonials = [
+  {
+    quote:
+      "DEPEL demostro profesionalismo y compromiso en la instalacion electrica de nuestra planta. Cumplieron con los tiempos y las normas de seguridad. Su equipo estuvo presente en cada etapa del proyecto y resolvieron los imprevistos con rapidez.",
+    name: "Ing. Carlos Martinez",
+    role: "Gerente de Planta",
+    company: "Farmaceutica del Centro",
+  },
+  {
+    quote:
+      "El mantenimiento preventivo que nos brinda DEPEL ha reducido significativamente nuestros tiempos de inactividad. Llevamos mas de 5 anos trabajando juntos y la calidad del servicio se ha mantenido constante. Un equipo verdaderamente confiable.",
+    name: "Lic. Maria Fernandez",
+    role: "Directora de Operaciones",
+    company: "Industrias del Sur",
+  },
+  {
+    quote:
+      "La instalacion de paneles solares fue impecable. Redujimos nuestro costo energetico en un 40% en el primer ano gracias a su asesoria. El retorno de inversion fue mas rapido de lo que esperabamos.",
+    name: "Ing. Roberto Sanchez",
+    role: "Director General",
+    company: "Manufacturas Morelos",
+  },
+];
 
 export function Testimonials() {
-  const [current, setCurrent] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [isPaused]);
-
-  const goTo = (index: number) => setCurrent(index);
-  const prev = () =>
-    setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
-  const next = () => setCurrent((c) => (c + 1) % testimonials.length);
+  const [active, setActive] = useState(0);
 
   return (
-    <section
-      className="py-20 lg:py-28"
-      aria-labelledby="testimonials-heading"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-    >
+    <section className="py-20 lg:py-28" aria-labelledby="testimonials-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
+        <h2
           id="testimonials-heading"
-          title="Lo que Dicen Nuestros Clientes"
-        />
+          className="text-3xl md:text-4xl font-bold text-neutral-dark"
+        >
+          Testimonios
+        </h2>
+        <p className="mt-3 text-neutral-muted">
+          Lo que dicen quienes ya trabajan con nosotros.
+        </p>
 
-        <div className="relative max-w-3xl mx-auto">
-          {/* Quote icon */}
-          <Quote className="mx-auto h-10 w-10 text-primary/20 mb-6" />
-
-          {/* Testimonial */}
-          <div
-            role="region"
-            aria-roledescription="carousel"
-            aria-label="Testimonios de clientes"
-            className="relative min-h-[200px]"
-          >
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={testimonial.id}
-                role="group"
-                aria-roledescription="slide"
-                aria-label={`Testimonio ${index + 1} de ${testimonials.length}`}
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-12">
+          {/* Left: name selector */}
+          <div className="flex flex-row lg:flex-col gap-2">
+            {testimonials.map((t, i) => (
+              <button
+                key={t.name}
+                onClick={() => setActive(i)}
                 className={cn(
-                  "absolute inset-0 transition-all duration-500 text-center",
-                  index === current
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 translate-x-8 pointer-events-none"
+                  "text-left px-5 py-4 border-l-2 transition-all duration-200",
+                  i === active
+                    ? "border-primary bg-primary-50"
+                    : "border-transparent hover:bg-neutral-offwhite"
                 )}
               >
-                <blockquote className="text-lg md:text-xl text-neutral-dark leading-relaxed italic">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </blockquote>
-                <div className="mt-6">
-                  <p className="font-bold text-neutral-dark">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-sm text-neutral-muted">
-                    {testimonial.title}, {testimonial.company}
-                  </p>
-                </div>
-              </div>
+                <p
+                  className={cn(
+                    "text-sm font-bold",
+                    i === active ? "text-primary" : "text-neutral-dark"
+                  )}
+                >
+                  {t.name}
+                </p>
+                <p className="text-xs text-neutral-muted hidden sm:block">
+                  {t.company}
+                </p>
+              </button>
             ))}
           </div>
 
-          {/* Navigation */}
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <button
-              onClick={prev}
-              aria-label="Testimonio anterior"
-              className="p-2 rounded-full border border-neutral-border hover:bg-neutral-offwhite transition-colors"
-            >
-              <ChevronLeft className="h-5 w-5 text-neutral-muted" />
-            </button>
-
-            <div className="flex gap-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goTo(index)}
-                  aria-label={`Ir al testimonio ${index + 1}`}
-                  className={cn(
-                    "h-2.5 rounded-full transition-all duration-300",
-                    index === current
-                      ? "w-8 bg-primary"
-                      : "w-2.5 bg-neutral-border hover:bg-neutral-muted"
-                  )}
-                />
-              ))}
-            </div>
-
-            <button
-              onClick={next}
-              aria-label="Siguiente testimonio"
-              className="p-2 rounded-full border border-neutral-border hover:bg-neutral-offwhite transition-colors"
-            >
-              <ChevronRight className="h-5 w-5 text-neutral-muted" />
-            </button>
+          {/* Right: active quote */}
+          <div className="flex items-center">
+            <blockquote className="relative">
+              <p className="text-xl md:text-2xl lg:text-3xl leading-snug text-neutral-dark font-medium">
+                &ldquo;{testimonials[active].quote}&rdquo;
+              </p>
+              <footer className="mt-6 flex items-center gap-3">
+                <div className="h-px w-8 bg-primary" />
+                <div>
+                  <p className="text-sm font-bold text-neutral-dark">
+                    {testimonials[active].name}
+                  </p>
+                  <p className="text-sm text-neutral-muted">
+                    {testimonials[active].role},{" "}
+                    {testimonials[active].company}
+                  </p>
+                </div>
+              </footer>
+            </blockquote>
           </div>
         </div>
       </div>

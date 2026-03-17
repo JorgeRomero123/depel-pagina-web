@@ -60,7 +60,7 @@ export function Navbar() {
             ))}
             <a
               href="tel:+527773198115"
-              className="flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-neutral-dark transition-colors hover:bg-accent-alt"
+              className="flex items-center gap-2 bg-accent px-5 py-2.5 text-sm font-semibold text-neutral-dark transition-colors hover:bg-accent-alt"
             >
               <Phone className="h-4 w-4" />
               777 319 8115
@@ -103,7 +103,7 @@ export function Navbar() {
           ))}
           <a
             href="tel:+527773198115"
-            className="flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-base font-semibold text-neutral-dark"
+            className="flex items-center gap-2 bg-accent px-6 py-3 text-base font-semibold text-neutral-dark"
           >
             <Phone className="h-5 w-5" />
             777 319 8115
