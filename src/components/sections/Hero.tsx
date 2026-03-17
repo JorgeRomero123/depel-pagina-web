@@ -6,6 +6,7 @@ import Link from "next/link";
 export function Hero() {
   return (
     <section
+      data-dark-hero
       className="relative min-h-screen flex items-center"
       aria-labelledby="hero-heading"
     >

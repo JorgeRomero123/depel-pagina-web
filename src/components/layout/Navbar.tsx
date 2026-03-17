@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -17,14 +17,20 @@ const navLinks = [
 export function Navbar() {
   const isScrolled = useScrollPosition(50);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [hasDarkHero, setHasDarkHero] = useState(false);
+
+  useEffect(() => {
+    setHasDarkHero(!!document.querySelector("[data-dark-hero]"));
+  }, []);
+
+  // Use light (white) text only when on a dark hero page AND not yet scrolled
+  const useLightText = hasDarkHero && !isScrolled;
 
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-white shadow-md"
-          : "bg-transparent"
+        isScrolled ? "bg-white shadow-md" : "bg-transparent"
       )}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -34,7 +40,7 @@ export function Navbar() {
             <span
               className={cn(
                 "text-2xl font-bold tracking-wide transition-colors duration-300",
-                isScrolled ? "text-primary" : "text-white"
+                useLightText ? "text-white" : "text-primary"
               )}
             >
               DEPEL
@@ -50,9 +56,9 @@ export function Navbar() {
                 className={cn(
                   "relative text-sm font-semibold uppercase tracking-widest transition-colors duration-200",
                   "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full",
-                  isScrolled
-                    ? "text-neutral-dark hover:text-primary"
-                    : "text-white/90 hover:text-white"
+                  useLightText
+                    ? "text-white/90 hover:text-white"
+                    : "text-neutral-dark hover:text-primary"
                 )}
               >
                 {link.label}
@@ -76,9 +82,9 @@ export function Navbar() {
             aria-label={isMobileOpen ? "Cerrar menú" : "Abrir menú"}
           >
             {isMobileOpen ? (
-              <X className={cn("h-6 w-6", isScrolled ? "text-neutral-dark" : "text-white")} />
+              <X className={cn("h-6 w-6", useLightText ? "text-white" : "text-neutral-dark")} />
             ) : (
-              <Menu className={cn("h-6 w-6", isScrolled ? "text-neutral-dark" : "text-white")} />
+              <Menu className={cn("h-6 w-6", useLightText ? "text-white" : "text-neutral-dark")} />
             )}
           </button>
         </div>
