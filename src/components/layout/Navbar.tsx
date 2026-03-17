@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
@@ -17,13 +18,9 @@ const navLinks = [
 export function Navbar() {
   const isScrolled = useScrollPosition(50);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const [hasDarkHero, setHasDarkHero] = useState(false);
+  const pathname = usePathname();
+  const hasDarkHero = pathname === "/";
 
-  useEffect(() => {
-    setHasDarkHero(!!document.querySelector("[data-dark-hero]"));
-  }, []);
-
-  // Use light (white) text only when on a dark hero page AND not yet scrolled
   const useLightText = hasDarkHero && !isScrolled;
 
   return (
