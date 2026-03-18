@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { name, email, phone, company, message } = body;
 
-    // Validate required fields
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Nombre, email y mensaje son requeridos." },
@@ -13,28 +13,39 @@ export async function POST(request: Request) {
       );
     }
 
-    // For now, log the submission. Replace with Resend or other
-    // email service when API key is configured.
-    console.log("Contact form submission:", {
-      name,
-      email,
-      phone,
-      company,
-      message,
-      timestamp: new Date().toISOString(),
-    });
-
-    // TODO: Send email via Resend
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    // await resend.emails.send({
-    //   from: "DEPEL Website <noreply@depel.com.mx>",
-    //   to: "jonathan.depel@gmail.com",
-    //   subject: `Nuevo contacto: ${name} - ${company || "Sin empresa"}`,
-    //   text: `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${phone || "No proporcionado"}\nEmpresa: ${company || "No proporcionada"}\n\nMensaje:\n${message}`,
-    // });
+    // If RESEND_API_KEY is configured, send email
+    if (process.env.RESEND_API_KEY) {
+      const resend = new Resend(process.env.RESEND_API_KEY);
+      await resend.emails.send({
+        from: process.env.RESEND_FROM || "DEPEL Website <onboarding@resend.dev>",
+        to: process.env.CONTACT_EMAIL || "jonathan.depel@gmail.com",
+        replyTo: email,
+        subject: `Nuevo contacto: ${name}${company ? ` - ${company}` : ""}`,
+        text: [
+          `Nombre: ${name}`,
+          `Email: ${email}`,
+          `Teléfono: ${phone || "No proporcionado"}`,
+          `Empresa: ${company || "No proporcionada"}`,
+          "",
+          "Mensaje:",
+          message,
+        ].join("\n"),
+      });
+    } else {
+      // Fallback: log to console in development
+      console.log("Contact form submission (no RESEND_API_KEY):", {
+        name,
+        email,
+        phone,
+        company,
+        message,
+        timestamp: new Date().toISOString(),
+      });
+    }
 
     return NextResponse.json({ success: true });
-  } catch {
+  } catch (error) {
+    console.error("Contact form error:", error);
     return NextResponse.json(
       { error: "Error interno del servidor." },
       { status: 500 }
