@@ -8,8 +8,7 @@ const services = [
     title: "Ingeniería e Instalaciones Eléctricas",
     description:
       "Ingeniería basada en Normas Eléctricas Mexicanas. Mediciones, cálculos, diagramas y reportes en media y baja tensión para la industria.",
-    image:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80",
+    image: "/images/services/ingenieria.jpg",
   },
   {
     id: "asesorias-mantenimiento",
@@ -17,8 +16,7 @@ const services = [
     title: "Asesorías y Mantenimiento",
     description:
       "Asesorías en planeación, ejecución y puesta en marcha. Mantenimiento preventivo y correctivo para mantener tu operación sin interrupciones.",
-    image:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80",
+    image: "/images/services/mantenimiento.jpg",
   },
   {
     id: "energias-alternativas",
@@ -26,8 +24,7 @@ const services = [
     title: "Energías Alternativas",
     description:
       "Proyecto e instalación de paneles solares y turbinas para generación de energía. Reduce tu costo energético con una instalación profesional.",
-    image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80",
+    image: "/images/services/energia.jpg",
   },
 ];
 
@@ -37,7 +34,7 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2
           id="services-heading"
-          className="text-3xl md:text-4xl font-bold text-neutral-dark"
+          className="text-4xl lg:text-5xl font-bold text-neutral-dark"
         >
           Servicios
         </h2>
@@ -46,14 +43,18 @@ export function Services() {
           farmacéutica e industrial.
         </p>
 
-        <div className="mt-12 space-y-16">
-          {services.map((service) => (
+        <div className="mt-14 space-y-20">
+          {services.map((service, index) => (
             <div
               key={service.id}
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
             >
-              {/* Photo */}
-              <div className="aspect-[3/2] overflow-hidden bg-neutral-border">
+              {/* Photo — alternates sides */}
+              <div
+                className={`aspect-[3/2] overflow-hidden bg-neutral-border ${
+                  index % 2 === 1 ? "lg:order-2" : ""
+                }`}
+              >
                 <div
                   className="w-full h-full bg-cover bg-center"
                   style={{ backgroundImage: `url('${service.image}')` }}
@@ -63,8 +64,8 @@ export function Services() {
               </div>
 
               {/* Content */}
-              <div>
-                <span className="text-sm font-barlow font-bold text-neutral-muted tracking-wider">
+              <div className={index % 2 === 1 ? "lg:order-1" : ""}>
+                <span className="text-sm font-barlow font-bold text-accent tracking-wider">
                   {service.number}
                 </span>
                 <h3 className="mt-2 text-2xl font-bold text-neutral-dark">

@@ -53,7 +53,7 @@ export function Testimonials() {
                 className={cn(
                   "text-left px-5 py-4 border-l-2 transition-all duration-200",
                   i === active
-                    ? "border-primary bg-primary-50"
+                    ? "border-accent bg-primary-50"
                     : "border-transparent hover:bg-neutral-offwhite"
                 )}
               >
@@ -79,7 +79,7 @@ export function Testimonials() {
                 &ldquo;{testimonials[active].quote}&rdquo;
               </p>
               <footer className="mt-6 flex items-center gap-3">
-                <div className="h-px w-8 bg-primary" />
+                <div className="h-px w-8 bg-accent" />
                 <div>
                   <p className="text-sm font-bold text-neutral-dark">
                     {testimonials[active].name}

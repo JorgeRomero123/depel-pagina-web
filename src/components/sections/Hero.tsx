@@ -15,7 +15,7 @@ export function Hero() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=2000&q=80')",
+            "url('/images/hero/hero-main.jpg')",
         }}
       />
       <div className="absolute inset-0 bg-neutral-dark/70" />
@@ -54,7 +54,7 @@ export function Hero() {
             </a>
           </div>
 
-          {/* Trust markers — plain text, not badges */}
+          {/* Trust markers */}
           <div className="mt-12 flex gap-8 text-base md:text-lg text-white/60 uppercase tracking-wider font-semibold">
             <span>+15 años</span>
             <span>+200 proyectos</span>

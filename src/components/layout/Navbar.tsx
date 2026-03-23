@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -34,6 +35,14 @@ export function Navbar() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/images/logo-depel.png"
+              alt="DEPEL Ingeniería Eléctrica"
+              width={40}
+              height={48}
+              className="h-10 w-auto"
+              priority
+            />
             <span
               className={cn(
                 "text-2xl font-bold tracking-wide transition-colors duration-300",
@@ -46,21 +55,30 @@ export function Navbar() {
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-8" aria-label="Navegación principal">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "relative text-sm font-semibold uppercase tracking-widest transition-colors duration-200",
-                  "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full",
-                  useLightText
-                    ? "text-white/90 hover:text-white"
-                    : "text-neutral-dark hover:text-primary"
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "relative text-sm font-semibold uppercase tracking-widest transition-colors duration-200",
+                    "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 hover:after:w-full",
+                    isActive ? "after:w-full after:bg-accent" : "after:w-0 after:bg-accent",
+                    useLightText
+                      ? "text-white/90 hover:text-white"
+                      : isActive
+                        ? "text-primary"
+                        : "text-neutral-dark hover:text-primary"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <a
               href="tel:+527773198115"
               className="flex items-center gap-2 bg-accent px-5 py-2.5 text-sm font-semibold text-neutral-dark transition-colors hover:bg-accent-alt"

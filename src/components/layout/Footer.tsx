@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const navLinks = [
@@ -16,7 +17,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <span className="text-2xl font-bold tracking-wide">DEPEL</span>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/images/logo-depel.png"
+                alt="DEPEL"
+                width={40}
+                height={48}
+                className="h-10 w-auto brightness-0 invert"
+              />
+              <span className="text-2xl font-bold tracking-wide">DEPEL</span>
+            </div>
             <p className="mt-4 text-white/70 text-sm leading-relaxed">
               Ingeniería eléctrica industrial de confianza. Proyectos llave en mano
               desde la ingeniería hasta la puesta en marcha.

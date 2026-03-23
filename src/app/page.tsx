@@ -1,7 +1,8 @@
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { TurnkeyProcess } from "@/components/sections/TurnkeyProcess";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { ImageBreak } from "@/components/sections/ImageBreak";
 import { ProjectsShowcase } from "@/components/sections/ProjectsShowcase";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { CTASection } from "@/components/sections/CTASection";
@@ -13,6 +14,7 @@ export default function Home() {
       <Services />
       <TurnkeyProcess />
       <WhyChooseUs />
+      <ImageBreak />
       <ProjectsShowcase />
       <Testimonials />
       <CTASection />

@@ -43,7 +43,7 @@ export function WhyChooseUs() {
           <div className="lg:col-span-1">
             <h2
               id="why-heading"
-              className="text-3xl md:text-4xl font-bold text-neutral-dark"
+              className="text-4xl lg:text-5xl font-bold text-neutral-dark"
             >
               Por qué trabajar con DEPEL
             </h2>

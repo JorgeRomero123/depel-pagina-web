@@ -16,7 +16,7 @@ const projects = [
     description:
       "Instalación eléctrica completa para planta de manufactura. Sistema de distribución en media tensión con subestación, tableros de distribución y sistema de tierras.",
     image:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+      "/images/projects/proyecto-1.jpg",
   },
   {
     title: "Subestación Eléctrica",
@@ -25,7 +25,7 @@ const projects = [
     description:
       "Diseño, construcción e instalación de subestación eléctrica tipo pedestal de 500 KVA para planta farmacéutica. Incluye coordinación de protecciones y puesta en marcha.",
     image:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80",
+      "/images/projects/proyecto-2.jpg",
   },
   {
     title: "Paneles Solares Industriales",
@@ -34,7 +34,7 @@ const projects = [
     description:
       "Sistema fotovoltaico de 150 kWp para nave industrial con interconexión a CFE. Reducción del 40% en costo energético desde el primer año de operación.",
     image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80",
+      "/images/projects/proyecto-3.jpg",
   },
   {
     title: "Mantenimiento Planta Farmacéutica",
@@ -43,7 +43,7 @@ const projects = [
     description:
       "Programa de mantenimiento preventivo y correctivo para instalaciones eléctricas de planta farmacéutica. Termografía, pruebas de aislamiento y coordinación de protecciones.",
     image:
-      "https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=800&q=80",
+      "/images/projects/proyecto-4.jpg",
   },
   {
     title: "Tableros de Distribución",
@@ -52,7 +52,7 @@ const projects = [
     description:
       "Diseño, fabricación e instalación de tableros de distribución y control para línea de producción. Integración con sistema SCADA existente.",
     image:
-      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80",
+      "/images/projects/proyecto-5.jpg",
   },
   {
     title: "Iluminación Industrial LED",
@@ -61,7 +61,7 @@ const projects = [
     description:
       "Sustitución completa de sistema de iluminación a tecnología LED en nave industrial de 5,000 m². Reducción del 60% en consumo de iluminación.",
     image:
-      "https://images.unsplash.com/photo-1565608087341-404b25492fee?auto=format&fit=crop&w=800&q=80",
+      "/images/projects/proyecto-6.jpg",
   },
 ];
 

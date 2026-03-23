@@ -61,7 +61,7 @@ export default function NosotrosPage() {
           className="w-full h-64 md:h-80 lg:h-96 bg-cover bg-center bg-neutral-dark"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1600&q=80')",
+              "url('/images/about/industrial-plant.jpg')",
           }}
           role="img"
           aria-label="Equipo de trabajo DEPEL en campo"

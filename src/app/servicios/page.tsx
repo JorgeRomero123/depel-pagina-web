@@ -24,7 +24,7 @@ const services = [
       "Tableros de distribución y control",
     ],
     image:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+      "/images/services/ingenieria.jpg",
   },
   {
     id: "asesorias-mantenimiento",
@@ -41,7 +41,7 @@ const services = [
       "Diagnóstico y solución de fallas eléctricas",
     ],
     image:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80",
+      "/images/services/mantenimiento.jpg",
   },
   {
     id: "energias-alternativas",
@@ -58,7 +58,7 @@ const services = [
       "Asesoría en retorno de inversión",
     ],
     image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80",
+      "/images/services/energia.jpg",
   },
 ];
 
