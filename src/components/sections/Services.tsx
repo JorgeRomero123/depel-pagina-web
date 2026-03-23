@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { getImagePath } from "@/lib/basePath";
 
 const services = [
   {
@@ -57,7 +58,7 @@ export function Services() {
               >
                 <div
                   className="w-full h-full bg-cover bg-center"
-                  style={{ backgroundImage: `url('${service.image}')` }}
+                  style={{ backgroundImage: `url('${getImagePath(service.image)}')` }}
                   role="img"
                   aria-label={service.title}
                 />

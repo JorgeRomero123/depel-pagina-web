@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { getImagePath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "Proyectos",
@@ -93,7 +94,7 @@ export default function ProyectosPage() {
               <article key={project.title}>
                 <div
                   className="aspect-[3/2] bg-neutral-dark bg-cover bg-center"
-                  style={{ backgroundImage: `url('${project.image}')` }}
+                  style={{ backgroundImage: `url('${getImagePath(project.image)}')` }}
                   role="img"
                   aria-label={project.title}
                 />

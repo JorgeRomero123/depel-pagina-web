@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { getImagePath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "Servicios",
@@ -129,7 +130,7 @@ export default function ServiciosPage() {
                     className={`aspect-[4/3] bg-neutral-dark bg-cover bg-center ${
                       index % 2 === 1 ? "lg:order-2" : ""
                     }`}
-                    style={{ backgroundImage: `url('${service.image}')` }}
+                    style={{ backgroundImage: `url('${getImagePath(service.image)}')` }}
                     role="img"
                     aria-label={service.title}
                   />

@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { getImagePath } from "@/lib/basePath";
 
 const projects = [
   {
@@ -68,7 +69,7 @@ export function ProjectsShowcase() {
           <div className="group relative aspect-[4/3] lg:row-span-2 overflow-hidden bg-neutral-dark">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.03]"
-              style={{ backgroundImage: `url('${featured.image}')` }}
+              style={{ backgroundImage: `url('${getImagePath(featured.image)}')` }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-neutral-dark/80 via-neutral-dark/20 to-transparent" />
             <div className="absolute bottom-0 left-0 p-8">
@@ -92,7 +93,7 @@ export function ProjectsShowcase() {
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.03]"
-                style={{ backgroundImage: `url('${project.image}')` }}
+                style={{ backgroundImage: `url('${getImagePath(project.image)}')` }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-dark/70 to-transparent" />
               <div className="absolute bottom-0 left-0 p-6">

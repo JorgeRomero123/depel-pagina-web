@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { getImagePath } from "@/lib/basePath";
 
 export function Hero() {
   return (
@@ -15,7 +16,7 @@ export function Hero() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('/images/hero/hero-main.jpg')",
+            `url('${getImagePath("/images/hero/hero-main.jpg")}')`,
         }}
       />
       <div className="absolute inset-0 bg-neutral-dark/70" />

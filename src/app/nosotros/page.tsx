@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Shield, Award, Users, Target } from "lucide-react";
+import { getImagePath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "Nosotros",
@@ -61,7 +62,7 @@ export default function NosotrosPage() {
           className="w-full h-64 md:h-80 lg:h-96 bg-cover bg-center bg-neutral-dark"
           style={{
             backgroundImage:
-              "url('/images/about/industrial-plant.jpg')",
+              `url('${getImagePath("/images/about/industrial-plant.jpg")}')`,
           }}
           role="img"
           aria-label="Equipo de trabajo DEPEL en campo"
