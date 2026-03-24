@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { getImagePath } from "@/lib/basePath";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
@@ -35,13 +35,10 @@ export function Navbar() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/images/logo-depel.png"
+            <img
+              src={getImagePath("/images/logo-depel.png")}
               alt="DEPEL Ingeniería Eléctrica"
-              width={40}
-              height={48}
               className="h-10 w-auto"
-              priority
             />
             <span
               className={cn(

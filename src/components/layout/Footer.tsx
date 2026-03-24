@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { getImagePath } from "@/lib/basePath";
 
 const navLinks = [
   { href: "/", label: "Inicio" },
@@ -18,11 +18,9 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2">
-              <Image
-                src="/images/logo-depel.png"
+              <img
+                src={getImagePath("/images/logo-depel.png")}
                 alt="DEPEL"
-                width={40}
-                height={48}
                 className="h-10 w-auto brightness-0 invert"
               />
               <span className="text-2xl font-bold tracking-wide">DEPEL</span>
