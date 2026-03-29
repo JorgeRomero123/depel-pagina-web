@@ -72,12 +72,12 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm text-white/70">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-accent" />
-                Jiutepec, Morelos, México
+                Calle Francisco González Bocanegra #78, Col. El Porvenir, Jiutepec, Morelos
               </li>
               <li className="flex items-center gap-3 text-sm text-white/70">
                 <Phone className="h-4 w-4 shrink-0 text-accent" />
-                <a href="tel:+527773198115" className="hover:text-white transition-colors">
-                  (777) 319 8115
+                <a href="tel:+527772187383" className="hover:text-white transition-colors">
+                  (777) 218 7383
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/70">

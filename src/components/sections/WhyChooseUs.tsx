@@ -27,7 +27,7 @@ const reasons = [
   {
     title: "Soporte Directo",
     description:
-      "Una llamada al (777) 319 8115. Sin call centers, sin tickets. Atención directa cuando la necesitas.",
+      "Una llamada al (777) 218 7383. Sin call centers, sin tickets. Atención directa cuando la necesitas.",
   },
 ];
 

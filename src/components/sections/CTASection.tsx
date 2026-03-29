@@ -22,10 +22,10 @@ export function CTASection() {
 
           <p className="mt-8 font-barlow text-3xl md:text-4xl font-bold text-white">
             <a
-              href="tel:+527773198115"
+              href="tel:+527772187383"
               className="hover:text-accent transition-colors"
             >
-              (777) 319 8115
+              (777) 218 7383
             </a>
           </p>
 
@@ -38,7 +38,7 @@ export function CTASection() {
               <ArrowRight className="h-5 w-5" />
             </Link>
             <a
-              href="https://wa.me/527773198115?text=Hola%2C%20me%20interesa%20conocer%20sus%20servicios"
+              href="https://wa.me/527772187383?text=Hola%2C%20me%20interesa%20conocer%20sus%20servicios"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"

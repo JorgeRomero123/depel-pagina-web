@@ -77,11 +77,11 @@ export function Navbar() {
               );
             })}
             <a
-              href="tel:+527773198115"
+              href="tel:+527772187383"
               className="flex items-center gap-2 bg-accent px-5 py-2.5 text-sm font-semibold text-neutral-dark transition-colors hover:bg-accent-alt"
             >
               <Phone className="h-4 w-4" />
-              777 319 8115
+              777 218 7383
             </a>
           </nav>
 
@@ -120,11 +120,11 @@ export function Navbar() {
             </Link>
           ))}
           <a
-            href="tel:+527773198115"
+            href="tel:+527772187383"
             className="flex items-center gap-2 bg-accent px-6 py-3 text-base font-semibold text-neutral-dark"
           >
             <Phone className="h-5 w-5" />
-            777 319 8115
+            777 218 7383
           </a>
         </nav>
       )}

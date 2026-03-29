@@ -48,10 +48,10 @@ export function Hero() {
               <ArrowRight className="h-5 w-5" />
             </Link>
             <a
-              href="tel:+527773198115"
+              href="tel:+527772187383"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/40 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
             >
-              (777) 319 8115
+              (777) 218 7383
             </a>
           </div>
 

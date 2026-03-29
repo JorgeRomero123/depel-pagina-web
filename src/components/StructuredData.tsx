@@ -6,10 +6,11 @@ export function StructuredData() {
     description:
       "Ingeniería eléctrica industrial, instalaciones en media y baja tensión, mantenimiento preventivo y correctivo, energías alternativas.",
     url: "https://www.depel.com.mx",
-    telephone: "+527773198115",
+    telephone: "+527772187383",
     email: "jonathan.depel@gmail.com",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Calle Francisco González Bocanegra #78, Col. El Porvenir",
       addressLocality: "Jiutepec",
       addressRegion: "Morelos",
       addressCountry: "MX",

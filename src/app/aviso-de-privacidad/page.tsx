@@ -116,14 +116,14 @@ export default function AvisoDePrivacidadPage() {
             <li>
               <strong>Teléfono:</strong>{" "}
               <a
-                href="tel:+527773198115"
+                href="tel:+527772187383"
                 className="text-primary hover:text-primary-light transition-colors"
               >
-                (777) 319 8115
+                (777) 218 7383
               </a>
             </li>
             <li>
-              <strong>Domicilio:</strong> Jiutepec, Morelos, México
+              <strong>Domicilio:</strong> Calle Francisco González Bocanegra #78, Col. El Porvenir, Jiutepec, Morelos, México
             </li>
           </ul>
         </div>

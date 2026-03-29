@@ -5,15 +5,15 @@ import { ContactForm } from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contacto",
   description:
-    "Contáctenos para una evaluación sin compromiso. Jiutepec, Morelos, México. Teléfono: (777) 319 8115.",
+    "Contáctenos para una evaluación sin compromiso. Jiutepec, Morelos, México. Teléfono: (777) 218 7383.",
 };
 
 const contactInfo = [
   {
     icon: Phone,
     label: "Teléfono",
-    value: "(777) 319 8115",
-    href: "tel:+527773198115",
+    value: "(777) 218 7383",
+    href: "tel:+527772187383",
   },
   {
     icon: Mail,
@@ -24,7 +24,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Ubicación",
-    value: "Jiutepec, Morelos, México",
+    value: "Calle Francisco González Bocanegra #78, Col. El Porvenir, Jiutepec, Morelos",
     href: null,
   },
   {
@@ -93,7 +93,7 @@ export default function ContactoPage() {
                   ¿Prefiere escribirnos directamente?
                 </p>
                 <a
-                  href="https://wa.me/527773198115?text=Hola%2C%20me%20interesa%20conocer%20sus%20servicios"
+                  href="https://wa.me/527772187383?text=Hola%2C%20me%20interesa%20conocer%20sus%20servicios"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-whatsapp px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
