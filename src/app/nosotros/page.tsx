@@ -5,7 +5,7 @@ import { getImagePath } from "@/lib/basePath";
 export const metadata: Metadata = {
   title: "Nosotros",
   description:
-    "Más de 15 años de experiencia en ingeniería eléctrica industrial. Conozca nuestra misión, visión y valores. Jiutepec, Morelos, México.",
+    "Más de 25 años de experiencia en ingeniería eléctrica industrial. Conozca nuestra misión, visión y valores. Jiutepec, Morelos, México.",
 };
 
 const values = [
@@ -49,7 +49,7 @@ export default function NosotrosPage() {
           </h1>
           <p className="mt-6 text-lg text-neutral-muted max-w-2xl leading-relaxed">
             Somos una empresa de ingeniería eléctrica industrial con sede en
-            Jiutepec, Morelos. Desde hace más de 15 años desarrollamos y
+            Jiutepec, Morelos. Desde hace más de 25 años desarrollamos y
             ejecutamos proyectos confiables para la industria farmacéutica,
             manufacturera e industrial del centro de México.
           </p>
@@ -132,7 +132,7 @@ export default function NosotrosPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             <div>
-              <p className="font-barlow text-5xl font-bold text-primary">15+</p>
+              <p className="font-barlow text-5xl font-bold text-primary">25+</p>
               <p className="mt-2 text-sm text-neutral-muted uppercase tracking-wider font-medium">
                 Años de experiencia
               </p>

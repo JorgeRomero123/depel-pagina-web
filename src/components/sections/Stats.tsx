@@ -4,7 +4,7 @@ import { useInView } from "@/hooks/useInView";
 import { useCountUp } from "@/hooks/useCountUp";
 
 const stats = [
-  { value: 15, suffix: "+", label: "Años de Experiencia" },
+  { value: 25, suffix: "+", label: "Años de Experiencia" },
   { value: 200, suffix: "+", label: "Proyectos Completados" },
   { value: 50, suffix: "+", label: "Clientes Industriales" },
   { value: 100, suffix: "%", label: "Cumplimiento NOM" },

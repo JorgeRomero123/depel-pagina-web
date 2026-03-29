@@ -48,7 +48,7 @@ export function WhyChooseUs() {
               Por qué trabajar con DEPEL
             </h2>
             <p className="mt-4 text-neutral-muted leading-relaxed">
-              Más de 15 años respaldando la industria eléctrica en Morelos y
+              Más de 25 años respaldando la industria eléctrica en Morelos y
               el centro de México.
             </p>
           </div>
