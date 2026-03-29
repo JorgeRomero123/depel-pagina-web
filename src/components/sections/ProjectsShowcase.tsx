@@ -34,9 +34,6 @@ const projects = [
 ];
 
 export function ProjectsShowcase() {
-  const featured = projects[0];
-  const rest = projects.slice(1);
-
   return (
     <section
       className="py-20 lg:py-28 bg-neutral-offwhite"
@@ -64,32 +61,11 @@ export function ProjectsShowcase() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          {/* Featured project — larger */}
-          <div className="group relative aspect-[4/3] lg:row-span-2 overflow-hidden bg-neutral-dark">
-            <div
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.03]"
-              style={{ backgroundImage: `url('${getImagePath(featured.image)}')` }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-neutral-dark/80 via-neutral-dark/20 to-transparent" />
-            <div className="absolute bottom-0 left-0 p-8">
-              <span className="text-xs font-semibold uppercase tracking-wider text-accent">
-                {featured.category}
-              </span>
-              <h3 className="text-2xl font-bold text-white mt-1">
-                {featured.title}
-              </h3>
-              <span className="inline-block mt-2 text-sm font-barlow font-bold text-white/70">
-                {featured.stat}
-              </span>
-            </div>
-          </div>
-
-          {/* Remaining projects */}
-          {rest.map((project) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {projects.map((project) => (
             <div
               key={project.title}
-              className="group relative aspect-[3/2] overflow-hidden bg-neutral-dark"
+              className="group relative aspect-square overflow-hidden bg-neutral-dark"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.03]"
