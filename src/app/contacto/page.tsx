@@ -116,7 +116,7 @@ export default function ContactoPage() {
       <section className="w-full h-80 lg:h-96 bg-neutral-border">
         <iframe
           title="Ubicación DEPEL en Jiutepec, Morelos"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60235.83944200523!2d-99.21!3d18.88!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cddf8b3b32a845%3A0x48e6b3a8ef0e7f91!2sJiutepec%2C%20Mor.%2C%20M%C3%A9xico!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.5!2d-99.1745!3d18.8835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cddf0000000000%3A0x0!2sCalle%20Francisco%20Gonz%C3%A1lez%20Bocanegra%2078%2C%20El%20Porvenir%2C%20Jiutepec%2C%20Mor.%2C%20M%C3%A9xico!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx"
           className="w-full h-full border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
