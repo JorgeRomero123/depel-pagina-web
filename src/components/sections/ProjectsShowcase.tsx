@@ -21,7 +21,7 @@ const projects = [
     title: "Paneles Solares Industriales",
     category: "Energía Alternativa",
     stat: "150 kWp",
-    image: "/images/projects/proyecto-3.jpg",
+    image: "/images/services/energia.jpg",
     featured: false,
   },
   {
