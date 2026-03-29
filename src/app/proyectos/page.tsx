@@ -35,7 +35,7 @@ const projects = [
     description:
       "Sistema fotovoltaico de 150 kWp para nave industrial con interconexión a CFE. Reducción del 40% en costo energético desde el primer año de operación.",
     image:
-      "/images/projects/proyecto-3.jpg",
+      "/images/services/energia.jpg",
   },
   {
     title: "Mantenimiento Planta Farmacéutica",
