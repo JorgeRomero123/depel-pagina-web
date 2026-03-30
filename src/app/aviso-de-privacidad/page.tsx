@@ -123,7 +123,15 @@ export default function AvisoDePrivacidadPage() {
               </a>
             </li>
             <li>
-              <strong>Domicilio:</strong> Calle Francisco González Bocanegra #78, Col. El Porvenir, Jiutepec, Morelos, México
+              <strong>Domicilio:</strong>{" "}
+              <a
+                href="https://maps.google.com/?q=18.8819,-99.1706"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary-light transition-colors"
+              >
+                Calle Francisco González Bocanegra #78, Col. El Porvenir, Jiutepec, Morelos, México
+              </a>
             </li>
           </ul>
         </div>

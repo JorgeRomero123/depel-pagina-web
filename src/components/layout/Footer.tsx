@@ -72,7 +72,9 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm text-white/70">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-accent" />
-                Calle Francisco González Bocanegra #78, Col. El Porvenir, Jiutepec, Morelos
+                <a href="https://maps.google.com/?q=18.8819,-99.1706" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  Calle Francisco González Bocanegra #78, Col. El Porvenir, Jiutepec, Morelos
+                </a>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/70">
                 <Phone className="h-4 w-4 shrink-0 text-accent" />

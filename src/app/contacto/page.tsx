@@ -25,7 +25,7 @@ const contactInfo = [
     icon: MapPin,
     label: "Ubicación",
     value: "Calle Francisco González Bocanegra #78, Col. El Porvenir, Jiutepec, Morelos",
-    href: null,
+    href: "https://maps.google.com/?q=18.8819,-99.1706",
   },
   {
     icon: Clock,
@@ -116,7 +116,7 @@ export default function ContactoPage() {
       <section className="w-full h-80 lg:h-96 bg-neutral-border">
         <iframe
           title="Ubicación DEPEL en Jiutepec, Morelos"
-          src="https://maps.google.com/maps?q=Calle+Francisco+Gonz%C3%A1lez+Bocanegra+78,+Col+El+Porvenir,+Jiutepec,+Morelos,+M%C3%A9xico&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=18.8819,-99.1706&t=&z=17&ie=UTF8&iwloc=&output=embed"
           className="w-full h-full border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
