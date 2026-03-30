@@ -125,7 +125,7 @@ export default function AvisoDePrivacidadPage() {
             <li>
               <strong>Domicilio:</strong>{" "}
               <a
-                href="https://maps.google.com/?q=18.8819,-99.1706"
+                href="https://maps.google.com/?q=18.9193975,-99.1799282"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary-light transition-colors"
