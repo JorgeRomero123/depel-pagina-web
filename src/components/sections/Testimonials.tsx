@@ -1,97 +1,69 @@
-"use client";
-
-import { useState } from "react";
-import { cn } from "@/lib/cn";
+import { SectionLabel } from "@/components/ui/SectionHeading";
 
 const testimonials = [
   {
     quote:
-      "DEPEL demostró profesionalismo y compromiso en la instalación eléctrica de nuestra planta. Cumplieron con los tiempos y las normas de seguridad. Su equipo estuvo presente en cada etapa del proyecto y resolvieron los imprevistos con rapidez.",
+      "DEPEL demostró profesionalismo y compromiso en la instalación eléctrica de nuestra planta. Cumplieron con los tiempos y las normas de seguridad.",
     name: "Ing. Carlos Martínez",
-    role: "Gerente de Planta",
-    company: "Farmacéutica del Centro",
+    role: "Gerente de Planta · Farmacéutica del Centro",
   },
   {
     quote:
-      "El mantenimiento preventivo que nos brinda DEPEL ha reducido significativamente nuestros tiempos de inactividad. Llevamos más de 5 años trabajando juntos y la calidad del servicio se ha mantenido constante. Un equipo verdaderamente confiable.",
+      "El mantenimiento preventivo que nos brinda DEPEL ha reducido significativamente nuestros tiempos de inactividad. Un equipo altamente confiable.",
     name: "Lic. María Fernández",
-    role: "Directora de Operaciones",
-    company: "Industrias del Sur",
+    role: "Directora de Operaciones · Industrias del Sur",
   },
   {
     quote:
-      "La instalación de paneles solares fue impecable. Redujimos nuestro costo energético en un 40% en el primer año gracias a su asesoría. El retorno de inversión fue más rápido de lo que esperábamos.",
+      "La instalación de paneles solares fue impecable. Hemos reducido nuestro costo energético considerablemente gracias a su asesoría.",
     name: "Ing. Roberto Sánchez",
-    role: "Director General",
-    company: "Manufacturas Morelos",
+    role: "Director General · Manufacturas Morelos",
   },
 ];
 
 export function Testimonials() {
-  const [active, setActive] = useState(0);
-
   return (
-    <section className="py-20 lg:py-28" aria-labelledby="testimonials-heading">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section
+      className="bg-[#F4F1EA] py-20 lg:py-28"
+      aria-labelledby="testimonials-heading"
+    >
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
+        <SectionLabel index="006" label="Clientes / Testimonios" align="right" />
+
         <h2
           id="testimonials-heading"
-          className="text-3xl md:text-4xl font-bold text-neutral-dark"
+          className="mt-10 mb-14 lg:mb-16 font-[family-name:var(--font-barlow)] font-black uppercase text-neutral-dark leading-[0.9] tracking-[-0.01em] text-[clamp(2.5rem,5.5vw,5rem)]"
         >
-          Testimonios
+          Lo Que Dicen
+          <br />
+          Los <span className="text-[var(--color-primary)]">Gerentes de Planta.</span>
         </h2>
-        <p className="mt-3 text-neutral-muted">
-          Lo que dicen quienes ya trabajan con nosotros.
-        </p>
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-12">
-          {/* Left: name selector */}
-          <div className="flex flex-row lg:flex-col gap-2">
-            {testimonials.map((t, i) => (
-              <button
-                key={t.name}
-                onClick={() => setActive(i)}
-                className={cn(
-                  "text-left px-5 py-4 border-l-2 transition-all duration-200",
-                  i === active
-                    ? "border-accent bg-primary-50"
-                    : "border-transparent hover:bg-neutral-offwhite"
-                )}
+        <div className="grid grid-cols-1 md:grid-cols-3 border border-neutral-border/70 divide-y md:divide-y-0 md:divide-x divide-neutral-border/70">
+          {testimonials.map((t) => (
+            <figure
+              key={t.name}
+              className="p-8 lg:p-10 flex flex-col min-h-[360px]"
+            >
+              <span
+                aria-hidden="true"
+                className="font-[family-name:var(--font-barlow)] font-black text-[var(--color-accent)] text-5xl leading-none select-none"
               >
-                <p
-                  className={cn(
-                    "text-sm font-bold",
-                    i === active ? "text-primary" : "text-neutral-dark"
-                  )}
-                >
+                &rdquo;
+              </span>
+              <blockquote className="mt-6 text-neutral-dark text-lg leading-relaxed flex-1">
+                {t.quote}
+              </blockquote>
+              <figcaption className="mt-8 pt-6 border-t border-neutral-border/70">
+                <p className="font-[family-name:var(--font-barlow)] font-black uppercase text-neutral-dark text-base tracking-wide">
                   {t.name}
                 </p>
-                <p className="text-xs text-neutral-muted hidden sm:block">
-                  {t.company}
+                <p className="mt-1 font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-[0.18em] text-neutral-muted">
+                  {t.role}
                 </p>
-              </button>
-            ))}
-          </div>
-
-          {/* Right: active quote */}
-          <div className="flex items-center">
-            <blockquote className="relative">
-              <p className="text-xl md:text-2xl lg:text-3xl leading-snug text-neutral-dark font-medium">
-                &ldquo;{testimonials[active].quote}&rdquo;
-              </p>
-              <footer className="mt-6 flex items-center gap-3">
-                <div className="h-px w-8 bg-accent" />
-                <div>
-                  <p className="text-sm font-bold text-neutral-dark">
-                    {testimonials[active].name}
-                  </p>
-                  <p className="text-sm text-neutral-muted">
-                    {testimonials[active].role},{" "}
-                    {testimonials[active].company}
-                  </p>
-                </div>
-              </footer>
-            </blockquote>
-          </div>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </section>

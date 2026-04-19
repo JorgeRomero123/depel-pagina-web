@@ -1,35 +1,57 @@
-interface SectionHeadingProps {
-  title: string;
-  subtitle?: string;
-  light?: boolean;
-  id?: string;
+import { cn } from "@/lib/cn";
+
+interface SectionLabelProps {
+  index: string;
+  label: string;
+  align?: "left" | "right";
+  dark?: boolean;
+  className?: string;
 }
 
-export function SectionHeading({ title, subtitle, light, id }: SectionHeadingProps) {
+/**
+ * Blueprint-style section label:
+ *   [ 002 ] ——————— SERVICIOS / SCOPE
+ */
+export function SectionLabel({
+  index,
+  label,
+  align = "left",
+  dark = false,
+  className,
+}: SectionLabelProps) {
   return (
-    <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
-      <h2
-        id={id}
-        className={`text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tight ${
-          light ? "text-white" : "text-neutral-dark"
-        }`}
-      >
-        {title}
-      </h2>
-      {subtitle && (
-        <p
-          className={`mt-4 text-lg ${
-            light ? "text-white/70" : "text-neutral-muted"
-          }`}
-        >
-          {subtitle}
-        </p>
+    <div
+      className={cn(
+        "flex items-center gap-4 font-[family-name:var(--font-mono)] text-[11px] sm:text-xs uppercase tracking-[0.24em]",
+        align === "right" ? "justify-end" : "justify-start",
+        className
       )}
-      <div
-        className={`mt-6 mx-auto h-1 w-16 rounded ${
-          light ? "bg-accent" : "bg-primary"
-        }`}
+    >
+      <span
+        className={cn(
+          "whitespace-nowrap",
+          dark ? "text-white/60" : "text-neutral-muted"
+        )}
+      >
+        [ {index} ]
+      </span>
+      <span
+        className={cn(
+          "h-px flex-1 min-w-8 max-w-24",
+          dark ? "bg-white/20" : "bg-neutral-border"
+        )}
       />
+      <span
+        className={cn(
+          "whitespace-nowrap",
+          dark ? "text-white/60" : "text-neutral-muted"
+        )}
+      >
+        {label}
+      </span>
     </div>
   );
 }
+
+// Legacy export kept for compatibility
+export const SectionHeading = SectionLabel;

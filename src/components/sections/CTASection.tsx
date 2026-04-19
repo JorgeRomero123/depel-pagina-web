@@ -1,50 +1,78 @@
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, Phone, Mail, Play } from "lucide-react";
 import Link from "next/link";
+import { getImagePath } from "@/lib/basePath";
+import { SectionLabel } from "@/components/ui/SectionHeading";
 
 export function CTASection() {
   return (
     <section
-      className="py-20 lg:py-28 bg-primary-dark"
+      className="relative isolate overflow-hidden bg-[var(--color-navy-deep)] text-white py-20 lg:py-28"
       aria-labelledby="cta-heading"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl">
-          <h2
-            id="cta-heading"
-            className="text-3xl md:text-4xl font-bold text-white"
-          >
-            Hablemos de su proyecto
-          </h2>
-          <p className="mt-4 text-lg text-white/70 leading-relaxed">
-            Evaluación sin compromiso. Llámenos directamente o escríbanos
-            por WhatsApp.
-          </p>
+      {/* Background photo with color treatment + navy overlays */}
+      <div className="absolute inset-0 -z-10">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url('${getImagePath("/images/about/industrial-plant.jpg")}')`,
+          }}
+        />
+        <div className="absolute inset-0 bg-[var(--color-navy-deep)]/80 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-navy-deep)]/90 via-[var(--color-navy)]/70 to-[var(--color-navy-deep)]/90" />
+      </div>
 
-          <p className="mt-8 font-barlow text-3xl md:text-4xl font-bold text-white">
-            <a
-              href="tel:+527772187383"
-              className="hover:text-accent transition-colors"
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
+        <SectionLabel index="007" label="Siguiente Paso" dark />
+
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 lg:gap-16 items-start">
+          {/* Left — headline + description */}
+          <div>
+            <h2
+              id="cta-heading"
+              className="font-[family-name:var(--font-barlow)] font-black uppercase text-white leading-[0.9] tracking-[-0.01em] text-[clamp(2.5rem,5.5vw,5rem)]"
             >
-              (777) 218 7383
-            </a>
-          </p>
+              Tiene un Proyecto.
+              <br />
+              Necesita Certeza.
+            </h2>
+            <p className="mt-8 max-w-md text-white/70 leading-relaxed">
+              Cotizaciones en 72 horas. Ingeniería propia. Cumplimiento NOM
+              y DC3. Escríbanos o llame al equipo técnico directo.
+            </p>
+          </div>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          {/* Right — stacked contact bars */}
+          <div className="flex flex-col gap-3">
             <Link
               href="/contacto"
-              className="inline-flex items-center justify-center gap-2 bg-accent px-7 py-3.5 text-base font-semibold text-neutral-dark transition-colors hover:bg-accent-alt"
+              className="group flex items-center justify-between gap-4 bg-[var(--color-accent)] hover:bg-[var(--color-accent-alt)] px-6 py-5 font-[family-name:var(--font-mono)] text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] transition-colors"
             >
-              Solicitar Cotización
-              <ArrowRight className="h-5 w-5" />
+              <span className="flex items-center gap-3">
+                <Play className="h-3 w-3 fill-current" />
+                Solicitar Cotización
+              </span>
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <a
-              href="https://wa.me/527772187383?text=Hola%2C%20me%20interesa%20conocer%20sus%20servicios"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
+              href="tel:+527772187383"
+              className="group flex items-center justify-between gap-4 border border-white/30 hover:border-white hover:bg-white/5 px-6 py-5 font-[family-name:var(--font-mono)] text-sm uppercase tracking-[0.22em] text-white transition-colors"
             >
-              <MessageCircle className="h-5 w-5" />
-              WhatsApp
+              <span className="flex items-center gap-3">
+                <Phone className="h-4 w-4" />
+                777 · 218 · 7383
+              </span>
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
+            <a
+              href="mailto:jonathan.depel@gmail.com"
+              className="group flex items-center justify-between gap-4 border border-white/30 hover:border-white hover:bg-white/5 px-6 py-5 font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.22em] text-white transition-colors"
+            >
+              <span className="flex items-center gap-3">
+                <Mail className="h-4 w-4" />
+                info@depel.mx
+              </span>
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
         </div>
