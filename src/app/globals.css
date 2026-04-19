@@ -21,10 +21,16 @@
   --color-neutral-muted: #6C757D;
   --color-neutral-dark: #1A1D21;
 
+  /* Hero / dark surface tokens */
+  --color-navy: #0B1628;
+  --color-navy-deep: #070F1C;
+  --color-navy-soft: #13223A;
+
   --color-whatsapp: #25D366;
 
   --font-sans: "Inter", system-ui, sans-serif;
   --font-barlow: "Barlow Condensed", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
   --animate-fade-in: fade-in 0.6s ease-out forwards;
@@ -61,6 +67,18 @@ body {
   font-family: var(--font-sans);
   color: var(--color-neutral-text);
   background: #ffffff;
+}
+
+/* Hero grid overlay — faint vertical rules for the blueprint feel */
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 12.5% 100%;
+}
+
+/* Horizontal scan rules (top + bottom hairlines) */
+.hero-rule {
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Skip link for accessibility */

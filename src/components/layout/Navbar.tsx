@@ -31,7 +31,43 @@ export function Navbar() {
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       )}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* Top info strip — coordinates + certifications */}
+      <div
+        className={cn(
+          "border-b transition-colors duration-300",
+          isScrolled ? "border-neutral-border" : "border-white/5"
+        )}
+      >
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10 py-2.5">
+          <div
+            className={cn(
+              "flex items-center justify-between gap-4 font-[family-name:var(--font-mono)] text-[10px] sm:text-[11px] tracking-[0.18em] uppercase transition-colors duration-300",
+              useLightText ? "text-[var(--color-accent)]/90" : "text-neutral-muted"
+            )}
+          >
+            <div className="hidden sm:flex items-center gap-6 md:gap-10">
+              <span className="whitespace-nowrap">★ EST. 1999</span>
+              <span className="hidden md:inline whitespace-nowrap">Jiutepec · Morelos · MX</span>
+              <span className="hidden lg:inline whitespace-nowrap">18.8833°N · 99.1761°W</span>
+            </div>
+            <div className="sm:hidden whitespace-nowrap">★ EST. 1999 · JIUTEPEC MX</div>
+            <div className="flex items-center gap-4 md:gap-8">
+              <span className="hidden md:inline whitespace-nowrap">DC3 · NOM-001-SEDE · NOM-029-STPS</span>
+              <span className="md:hidden whitespace-nowrap">DC3 · NOM</span>
+              <span
+                className={cn(
+                  "whitespace-nowrap",
+                  useLightText ? "text-white/60" : "text-neutral-muted/70"
+                )}
+              >
+                [ ES ]
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">

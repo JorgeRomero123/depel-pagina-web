@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Barlow_Condensed } from "next/font/google";
+import { Inter, Barlow_Condensed, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -13,7 +13,13 @@ const inter = Inter({
 
 const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow",
-  weight: ["600", "700"],
+  weight: ["600", "700", "800", "900"],
+  subsets: ["latin"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
 });
 
@@ -70,7 +76,7 @@ export default function RootLayout({
   return (
     <html lang="es-MX">
       <body
-        className={`${inter.variable} ${barlowCondensed.variable} font-sans antialiased`}
+        className={`${inter.variable} ${barlowCondensed.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
         <StructuredData />
         <a href="#main-content" className="skip-link">
