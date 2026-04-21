@@ -1,7 +1,8 @@
-import { ArrowRight, Phone, Mail, Play } from "lucide-react";
+import { ArrowRight, MessageCircle, Mail, Play } from "lucide-react";
 import Link from "next/link";
 import { getImagePath } from "@/lib/basePath";
 import { SectionLabel } from "@/components/ui/SectionHeading";
+import { WHATSAPP_URL, WHATSAPP_DISPLAY, CONTACT_EMAIL } from "@/lib/contact";
 
 export function CTASection() {
   return (
@@ -38,7 +39,7 @@ export function CTASection() {
             </h2>
             <p className="mt-8 max-w-md text-white/70 leading-relaxed">
               Cotizaciones en 72 horas. Ingeniería propia. Cumplimiento NOM
-              y DC3. Escríbanos o llame al equipo técnico directo.
+              y DC3. Escríbanos por WhatsApp al equipo técnico directo.
             </p>
           </div>
 
@@ -55,22 +56,24 @@ export function CTASection() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <a
-              href="tel:+527772187383"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex items-center justify-between gap-4 border border-white/30 hover:border-white hover:bg-white/5 px-6 py-5 font-[family-name:var(--font-mono)] text-sm uppercase tracking-[0.22em] text-white transition-colors"
             >
               <span className="flex items-center gap-3">
-                <Phone className="h-4 w-4" />
-                777 · 218 · 7383
+                <MessageCircle className="h-4 w-4" />
+                WhatsApp · {WHATSAPP_DISPLAY}
               </span>
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="mailto:jonathan.depel@gmail.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="group flex items-center justify-between gap-4 border border-white/30 hover:border-white hover:bg-white/5 px-6 py-5 font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.22em] text-white transition-colors"
             >
               <span className="flex items-center gap-3">
                 <Mail className="h-4 w-4" />
-                info@depel.mx
+                {CONTACT_EMAIL}
               </span>
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>

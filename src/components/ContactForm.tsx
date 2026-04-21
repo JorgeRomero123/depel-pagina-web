@@ -49,7 +49,7 @@ export function ContactForm() {
     } catch {
       setForm({
         status: "error",
-        message: "Error de conexión. Intente de nuevo o llámenos directamente.",
+        message: "Error de conexión. Intente de nuevo o escríbanos por WhatsApp.",
       });
     }
   }

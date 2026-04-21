@@ -114,12 +114,14 @@ export default function AvisoDePrivacidadPage() {
               </a>
             </li>
             <li>
-              <strong>Teléfono:</strong>{" "}
+              <strong>WhatsApp:</strong>{" "}
               <a
-                href="tel:+527772187383"
+                href="https://wa.me/527772187364"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-primary hover:text-primary-light transition-colors"
               >
-                (777) 218 7383
+                777 218 7364
               </a>
             </li>
             <li>

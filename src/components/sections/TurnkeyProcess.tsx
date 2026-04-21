@@ -26,7 +26,7 @@ const steps = [
     number: "04",
     title: "Puesta en Marcha",
     description:
-      "Pruebas a conductores y equipos de protección. Arranque supervisado con reporte final.",
+      "Pruebas de arranque y reporte final.",
     next: null,
   },
 ];

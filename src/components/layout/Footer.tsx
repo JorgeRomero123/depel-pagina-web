@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { MessageCircle, Mail, MapPin, Clock } from "lucide-react";
 import { getImagePath } from "@/lib/basePath";
+import { WHATSAPP_URL, WHATSAPP_DISPLAY, CONTACT_EMAIL } from "@/lib/contact";
 
 const navLinks = [
   { href: "/", label: "Inicio" },
@@ -52,7 +53,7 @@ export function Footer() {
             </Link>
             <p className="mt-6 text-sm text-white/60 leading-relaxed">
               Ingeniería eléctrica industrial llave en mano en Morelos y el
-              centro de México. Desde 1999, sin subcontratos, sin excusas.
+              centro de México. Desde 1999, sin excusas.
             </p>
           </div>
 
@@ -105,21 +106,23 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-3 text-white/70">
-                <Phone className="h-4 w-4 shrink-0 text-[var(--color-accent)]" />
+                <MessageCircle className="h-4 w-4 shrink-0 text-[var(--color-accent)]" />
                 <a
-                  href="tel:+527772187383"
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-white transition-colors font-[family-name:var(--font-mono)]"
                 >
-                  777 · 218 · 7383
+                  WhatsApp · {WHATSAPP_DISPLAY}
                 </a>
               </li>
               <li className="flex items-center gap-3 text-white/70">
                 <Mail className="h-4 w-4 shrink-0 text-[var(--color-accent)]" />
                 <a
-                  href="mailto:jonathan.depel@gmail.com"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="hover:text-white transition-colors"
                 >
-                  jonathan.depel@gmail.com
+                  {CONTACT_EMAIL}
                 </a>
               </li>
               <li className="flex items-center gap-3 text-white/70">

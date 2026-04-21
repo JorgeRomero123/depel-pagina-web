@@ -6,7 +6,7 @@ export function StructuredData() {
     description:
       "Ingeniería eléctrica industrial, instalaciones en media y baja tensión, mantenimiento preventivo y correctivo, energías alternativas.",
     url: "https://www.depel.com.mx",
-    telephone: "+527772187383",
+    telephone: "+527772187364",
     email: "jonathan.depel@gmail.com",
     address: {
       "@type": "PostalAddress",

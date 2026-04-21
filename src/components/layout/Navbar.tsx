@@ -4,9 +4,10 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getImagePath } from "@/lib/basePath";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
+import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/lib/contact";
 
 const navLinks = [
   { href: "/", label: "Inicio" },
@@ -113,11 +114,13 @@ export function Navbar() {
               );
             })}
             <a
-              href="tel:+527772187383"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 bg-accent px-5 py-2.5 text-sm font-semibold text-neutral-dark transition-colors hover:bg-accent-alt"
             >
-              <Phone className="h-4 w-4" />
-              777 218 7383
+              <MessageCircle className="h-4 w-4" />
+              WhatsApp {WHATSAPP_DISPLAY}
             </a>
           </nav>
 
@@ -156,11 +159,13 @@ export function Navbar() {
             </Link>
           ))}
           <a
-            href="tel:+527772187383"
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 bg-accent px-6 py-3 text-base font-semibold text-neutral-dark"
           >
-            <Phone className="h-5 w-5" />
-            777 218 7383
+            <MessageCircle className="h-5 w-5" />
+            WhatsApp {WHATSAPP_DISPLAY}
           </a>
         </nav>
       )}

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { getImagePath } from "@/lib/basePath";
+import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "Servicios",
@@ -86,7 +87,7 @@ const processSteps = [
     number: "04",
     title: "Puesta en Marcha",
     description:
-      "Pruebas a conductores y equipos de protección. Arranque supervisado de los equipos.",
+      "Pruebas de arranque y reporte final.",
   },
 ];
 
@@ -214,10 +215,13 @@ export default function ServiciosPage() {
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <a
-                href="tel:+527772187383"
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 border-2 border-neutral-border px-7 py-3.5 text-base font-semibold text-neutral-dark transition-colors hover:bg-neutral-offwhite"
               >
-                (777) 218 7383
+                <MessageCircle className="h-5 w-5" />
+                WhatsApp {WHATSAPP_DISPLAY}
               </a>
             </div>
           </div>

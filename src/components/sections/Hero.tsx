@@ -74,7 +74,7 @@ export function Hero() {
         <p className="mt-8 md:mt-10 max-w-xl text-base md:text-lg leading-relaxed text-white/75">
           Proyectos llave en mano para planta farmacéutica e industrial en
           Morelos y el centro de México. Certificación DC3. Cumplimiento
-          NOM. Sin subcontratos.
+          NOM.
         </p>
 
         {/* CTAs */}

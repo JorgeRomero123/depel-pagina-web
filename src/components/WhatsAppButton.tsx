@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { WHATSAPP_URL } from "@/lib/contact";
 
 export function WhatsAppButton() {
   const [showBounce, setShowBounce] = useState(false);
@@ -12,7 +13,7 @@ export function WhatsAppButton() {
 
   return (
     <a
-      href="https://wa.me/527772187383?text=Hola%2C%20me%20interesa%20conocer%20sus%20servicios"
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"

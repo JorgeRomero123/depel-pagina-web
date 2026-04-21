@@ -59,6 +59,6 @@ export const processSteps = [
     number: 4,
     title: "Puesta en Marcha",
     description:
-      "Se realizan pruebas a conductores y equipos de protección, se procede al arranque.",
+      "Se realizan pruebas de arranque y se entrega el reporte final.",
   },
 ];

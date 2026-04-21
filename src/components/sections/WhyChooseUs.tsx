@@ -52,9 +52,9 @@ export function WhyChooseUs() {
             Cero Excusas.
           </h2>
           <p className="text-white/60 leading-relaxed max-w-sm lg:justify-self-end">
-            Más de 25 años respaldando la industria eléctrica en Morelos y
-            el centro de México. La confianza se gana cableando bien, no
-            con promesas.
+            Más de 25 años respaldando a la industria en Morelos y el
+            centro de México. La confianza se gana con la entrega de
+            proyectos profesionales.
           </p>
         </div>
 
