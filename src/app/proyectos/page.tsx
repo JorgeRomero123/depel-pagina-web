@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getImagePath } from "@/lib/basePath";
+import { SectionLabel } from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Proyectos",
@@ -66,6 +67,79 @@ const projects = [
   },
 ];
 
+const galleryItems = [
+  {
+    image: "/images/projects/gallery/tablero-energizado.jpg",
+    caption: "Tablero principal energizado",
+    detail: "Distribución BT",
+  },
+  {
+    image: "/images/projects/gallery/maniobra-switchgear.jpg",
+    caption: "Maniobra en tablero general",
+    detail: "EPP eléctrico clase 2",
+  },
+  {
+    image: "/images/projects/gallery/transformador-bushings.jpg",
+    caption: "Transformador con bushings H1·H2·H3",
+    detail: "Pruebas de relación",
+  },
+  {
+    image: "/images/projects/gallery/charolas-cable.jpg",
+    caption: "Sistema de charolas portacable",
+    detail: "Distribución vertical",
+  },
+  {
+    image: "/images/projects/gallery/tablero-uma.jpg",
+    caption: "Tablero de control UMA",
+    detail: "Acero inoxidable",
+  },
+  {
+    image: "/images/projects/gallery/control-cabinets.jpg",
+    caption: "Tableros de control de bombas",
+    detail: "Sistema de agua helada",
+  },
+  {
+    image: "/images/projects/gallery/pruebas-aislamiento.jpg",
+    caption: "Pruebas de aislamiento Megger",
+    detail: "Cable de media tensión",
+  },
+  {
+    image: "/images/projects/gallery/sistema-tierras.jpg",
+    caption: "Sistema de puesta a tierra",
+    detail: "Conexión a barra equipotencial",
+  },
+  {
+    image: "/images/projects/gallery/estacion-contactos.jpg",
+    caption: "Estación de contactos de servicio",
+    detail: "Categoría 1 · 220 VAC",
+  },
+  {
+    image: "/images/projects/gallery/ccm-baja-tension.jpg",
+    caption: "CCM en baja tensión",
+    detail: "480 VCA",
+  },
+  {
+    image: "/images/projects/gallery/tendido-cable.jpg",
+    caption: "Tendido de cable de potencia",
+    detail: "Cuadrilla en obra",
+  },
+  {
+    image: "/images/projects/gallery/switchgear-trays.jpg",
+    caption: "Switchgear con charolas perimetrales",
+    detail: "Cuarto eléctrico",
+  },
+  {
+    image: "/images/projects/gallery/proceso-vertical.jpg",
+    caption: "Equipo de proceso e infraestructura",
+    detail: "Planta industrial",
+  },
+  {
+    image: "/images/projects/gallery/tuberia-conduit.jpg",
+    caption: "Tubería conduit y soportería",
+    detail: "Ruta vertical",
+  },
+];
+
 export default function ProyectosPage() {
   return (
     <>
@@ -114,6 +188,65 @@ export default function ProyectosPage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Gallery — documentación de obra */}
+      <section
+        className="py-20 lg:py-28 border-t border-neutral-border"
+        aria-labelledby="gallery-heading"
+      >
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
+          <SectionLabel index="002" label="Galería / Documentación de Obra" />
+
+          <div className="mt-10 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+            <h2
+              id="gallery-heading"
+              className="font-[family-name:var(--font-barlow)] font-black uppercase text-neutral-dark leading-[0.9] tracking-[-0.01em] text-[clamp(2.5rem,5vw,4.5rem)] max-w-3xl"
+            >
+              Más obra.
+              <br />
+              Sin filtros.
+            </h2>
+            <p className="text-neutral-muted leading-relaxed max-w-sm font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.18em]">
+              Tablero · Transformador · Charola · Tierra · Cuadrilla
+            </p>
+          </div>
+
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+            {galleryItems.map((item, i) => (
+              <li
+                key={item.image}
+                className="group relative overflow-hidden bg-neutral-border"
+              >
+                <div className="relative aspect-[4/3]">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-[600ms] ease-out group-hover:scale-[1.03]"
+                    style={{
+                      backgroundImage: `url('${getImagePath(item.image)}')`,
+                    }}
+                    role="img"
+                    aria-label={item.caption}
+                  />
+                  {/* Bottom shade for caption legibility on hover */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[var(--color-navy-deep)]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  {/* Index ref top-left */}
+                  <span className="absolute top-3 left-3 bg-[var(--color-navy-deep)] text-white font-[family-name:var(--font-mono)] text-[10px] tracking-[0.2em] px-2.5 py-1">
+                    G.{String(i + 1).padStart(2, "0")}
+                  </span>
+                  {/* Caption — appears on hover */}
+                  <div className="absolute inset-x-4 bottom-3 text-white opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                    <p className="font-[family-name:var(--font-barlow)] font-bold uppercase text-base leading-tight">
+                      {item.caption}
+                    </p>
+                    <p className="mt-1 font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.18em] text-white/70">
+                      {item.detail}
+                    </p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
