@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Clock, MessageCircle } from "lucide-react";
-import { ContactForm } from "@/components/ContactForm";
+import { Mail, MapPin, Clock, MessageCircle, ArrowRight } from "lucide-react";
 import {
   WHATSAPP_URL,
   WHATSAPP_DISPLAY,
@@ -56,17 +55,21 @@ export default function ContactoPage() {
             Hablemos de su proyecto
           </h1>
           <p className="mt-6 text-lg text-neutral-muted max-w-2xl leading-relaxed">
-            Evaluación sin compromiso. Le respondemos en menos de 24 horas.
+            Evaluación sin compromiso. Le respondemos en menos de 24 horas por
+            WhatsApp o correo.
           </p>
         </div>
       </section>
 
-      {/* Contact info + Form */}
+      {/* Contact info + CTAs */}
       <section className="pb-20 lg:pb-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left: contact info */}
             <div>
+              <h2 className="text-xs uppercase tracking-wider text-neutral-muted font-semibold mb-6">
+                Información de contacto
+              </h2>
               <div className="space-y-6">
                 {contactInfo.map((item) => {
                   const Icon = item.icon;
@@ -97,27 +100,48 @@ export default function ContactoPage() {
                   );
                 })}
               </div>
+            </div>
 
-              {/* WhatsApp */}
-              <div className="mt-10 pt-8 border-t border-neutral-border">
-                <p className="text-sm text-neutral-muted mb-4">
-                  ¿Prefiere escribirnos directamente?
-                </p>
+            {/* Right: direct CTAs */}
+            <div className="bg-neutral-light border border-neutral-border p-8 lg:p-10">
+              <h2 className="text-2xl font-bold text-neutral-dark">
+                Escríbanos directamente
+              </h2>
+              <p className="mt-3 text-neutral-muted leading-relaxed">
+                La forma más rápida de obtener una cotización es por WhatsApp.
+                También puede enviarnos un correo y le respondemos el mismo día
+                hábil.
+              </p>
+
+              <div className="mt-8 space-y-3">
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-whatsapp px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  className="flex items-center justify-between gap-3 bg-whatsapp px-6 py-4 text-base font-semibold text-white transition-opacity hover:opacity-90"
                 >
-                  <MessageCircle className="h-4 w-4" />
-                  Enviar WhatsApp
+                  <span className="inline-flex items-center gap-3">
+                    <MessageCircle className="h-5 w-5" />
+                    WhatsApp · {WHATSAPP_DISPLAY}
+                  </span>
+                  <ArrowRight className="h-5 w-5" />
+                </a>
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="flex items-center justify-between gap-3 bg-neutral-dark px-6 py-4 text-base font-semibold text-white transition-opacity hover:opacity-90"
+                >
+                  <span className="inline-flex items-center gap-3">
+                    <Mail className="h-5 w-5" />
+                    {CONTACT_EMAIL}
+                  </span>
+                  <ArrowRight className="h-5 w-5" />
                 </a>
               </div>
-            </div>
 
-            {/* Right: form */}
-            <div>
-              <ContactForm />
+              <p className="mt-6 text-sm text-neutral-muted">
+                Para una cotización rápida, comparta: ubicación del proyecto,
+                tipo de trabajo (eléctrico, civil, mecánico) y fecha estimada.
+              </p>
             </div>
           </div>
         </div>
