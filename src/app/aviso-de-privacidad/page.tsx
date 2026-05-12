@@ -116,12 +116,12 @@ export default function AvisoDePrivacidadPage() {
             <li>
               <strong>WhatsApp:</strong>{" "}
               <a
-                href="https://wa.me/527772187364"
+                href="https://wa.me/527772187383"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary-light transition-colors"
               >
-                777 218 7364
+                777 218 7383
               </a>
             </li>
             <li>
