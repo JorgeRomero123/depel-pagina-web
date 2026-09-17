@@ -38,7 +38,7 @@ export function TurnkeyProcess() {
       aria-labelledby="process-heading"
     >
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
-        <SectionLabel index="003" label="Proceso / Turnkey" />
+        <SectionLabel index="004" label="Proceso / Turnkey" />
 
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-8 lg:gap-16 items-end mb-14 lg:mb-16">
           <h2

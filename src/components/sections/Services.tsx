@@ -44,7 +44,7 @@ export function Services() {
   return (
     <section className="bg-white py-20 lg:py-28" aria-labelledby="services-heading">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
-        <SectionLabel index="002" label="Servicios / Scope" />
+        <SectionLabel index="003" label="Servicios / Scope" />
 
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-12 lg:gap-16">
           {/* Left column — massive heading + specs table */}

@@ -24,7 +24,7 @@ export function CTASection() {
       </div>
 
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
-        <SectionLabel index="007" label="Siguiente Paso" dark />
+        <SectionLabel index="008" label="Siguiente Paso" dark />
 
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 lg:gap-16 items-start">
           {/* Left — headline + description */}

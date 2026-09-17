@@ -40,7 +40,7 @@ export function WhyChooseUs() {
       aria-labelledby="why-heading"
     >
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
-        <SectionLabel index="004" label="Por Qué DEPEL" dark align="right" />
+        <SectionLabel index="005" label="Por Qué DEPEL" dark align="right" />
 
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-8 lg:gap-16 items-end mb-14 lg:mb-16">
           <h2

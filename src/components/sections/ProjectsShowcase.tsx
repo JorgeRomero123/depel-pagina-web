@@ -49,7 +49,7 @@ export function ProjectsShowcase() {
       aria-labelledby="projects-heading"
     >
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
-        <SectionLabel index="005" label="Proyectos / Index 2022–2024" />
+        <SectionLabel index="006" label="Proyectos / Index 2022–2024" />
 
         <div className="mt-10 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
           <h2

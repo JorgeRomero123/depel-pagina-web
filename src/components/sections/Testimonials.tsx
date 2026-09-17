@@ -28,7 +28,7 @@ export function Testimonials() {
       aria-labelledby="testimonials-heading"
     >
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
-        <SectionLabel index="006" label="Clientes / Testimonios" align="right" />
+        <SectionLabel index="007" label="Clientes / Testimonios" align="right" />
 
         <h2
           id="testimonials-heading"
